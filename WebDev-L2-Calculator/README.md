@@ -6,7 +6,7 @@ A modern, responsive calculator built using **HTML, CSS, and JavaScript**. This 
 
 ## 📸 Preview
 
-(Add a screenshot here after uploading to GitHub.)
+<img width="500" height="791" alt="screenshot" src="https://github.com/user-attachments/assets/71861afd-f12e-4116-9286-65c7d759248d" />
 
 ---
 
