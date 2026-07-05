@@ -1,0 +1,467 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    transition:.4s;
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+/* ==========================
+   CALCULATOR
+========================== */
+
+.calculator{
+
+    width:420px;
+    max-width:100%;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+/* ==========================
+   TITLE BAR
+========================== */
+
+.title-bar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.title-bar h2{
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:600;
+
+}
+
+#theme-toggle{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.3s;
+
+}
+
+#theme-toggle:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================
+   DISPLAY
+========================== */
+
+#display{
+
+    width:100%;
+
+    height:75px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    background:white;
+
+    padding:0 15px;
+
+    text-align:right;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================
+   BUTTON GRID
+========================== */
+
+.buttons{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:12px;
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+button{
+
+    height:65px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+    background:white;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+/* ==========================
+   SCIENTIFIC
+========================== */
+
+.scientific{
+
+    background:#6C63FF;
+
+    color:white;
+
+}
+
+.scientific:hover{
+
+    background:#554bd9;
+
+}
+
+/* ==========================
+   SPECIAL BUTTONS
+========================== */
+
+.clear{
+
+    background:#ff5252;
+
+    color:white;
+
+}
+
+.delete{
+
+    background:#ff9800;
+
+    color:white;
+
+}
+
+.equal{
+
+    background:#00c853;
+
+    color:white;
+
+}
+
+.zero{
+
+    grid-column:span 2;
+
+}
+
+/* ==========================
+   HISTORY
+========================== */
+
+.history{
+
+    margin-top:25px;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+}
+
+.history-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.history-header h3{
+
+    font-size:18px;
+
+}
+
+#clear-history{
+
+    width:auto;
+
+    height:35px;
+
+    padding:0 12px;
+
+    font-size:14px;
+
+    background:#ff5252;
+
+    color:white;
+
+}
+
+.history ul{
+
+    list-style:none;
+
+    margin-top:10px;
+
+    max-height:160px;
+
+    overflow-y:auto;
+
+}
+
+.history ul::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.history ul::-webkit-scrollbar-thumb{
+
+    background:white;
+
+    border-radius:20px;
+
+}
+
+.history li{
+
+    padding:8px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.2);
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:14px;
+
+}
+
+/* ==========================
+   DARK MODE
+========================== */
+
+body.dark{
+
+    background:linear-gradient(135deg,#141E30,#243B55);
+
+}
+
+body.dark .calculator{
+
+    background:rgba(0,0,0,.35);
+
+}
+
+body.dark #display{
+
+    background:#1c1c1c;
+
+    color:white;
+
+}
+
+body.dark button{
+
+    background:#2b2b2b;
+
+    color:white;
+
+}
+
+body.dark .scientific{
+
+    background:#5d55e0;
+
+}
+
+body.dark .clear{
+
+    background:#d32f2f;
+
+}
+
+body.dark .delete{
+
+    background:#ef6c00;
+
+}
+
+body.dark .equal{
+
+    background:#2e7d32;
+
+}
+
+body.dark .history{
+
+    background:rgba(0,0,0,.25);
+
+}
+
+body.dark #theme-toggle{
+
+    background:#ffffff;
+
+    color:black;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:500px){
+
+    .calculator{
+
+        width:100%;
+
+        padding:18px;
+
+    }
+
+    button{
+
+        height:58px;
+
+        font-size:18px;
+
+    }
+
+    #display{
+
+        height:65px;
+
+        font-size:24px;
+
+    }
+
+    .title-bar h2{
+
+        font-size:22px;
+
+    }
+
+}
+.operator{
+    background:#2196F3;
+    color:white;
+}
+
+.operator:hover{
+    background:#1976D2;
+}
