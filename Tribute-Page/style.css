@@ -1,0 +1,512 @@
+/* =====================================
+   RESET
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+    line-height:1.6;
+    transition:.4s;
+}
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(0,0,0,.8);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#FFD700;
+}
+
+#theme-toggle{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:18px;
+    background:white;
+    transition:.3s;
+}
+
+#theme-toggle:hover{
+    transform:rotate(20deg);
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero{
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url("images/mandela.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+}
+
+.hero-content{
+    max-width:700px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:35px;
+    font-style:italic;
+}
+
+.btn{
+
+    display:inline-block;
+
+    background:#FFD700;
+
+    color:black;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:white;
+
+    transform:translateY(-5px);
+
+}
+
+/* =====================================
+   SECTIONS
+===================================== */
+
+section{
+    padding:90px 10%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+}
+
+/* =====================================
+   ABOUT
+===================================== */
+
+.about-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+.about-text p{
+
+    margin-bottom:20px;
+
+    font-size:18px;
+
+}
+
+/* =====================================
+   TIMELINE
+===================================== */
+
+.timeline{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.timeline-item{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.timeline-item:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.timeline-item h3{
+
+    color:#0b7dda;
+
+    margin-bottom:10px;
+
+}
+
+/* =====================================
+   ACHIEVEMENTS
+===================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card i{
+
+    font-size:50px;
+
+    color:#FFD700;
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    font-size:22px;
+
+}
+
+/* =====================================
+   QUOTE
+===================================== */
+
+#quotes{
+
+    background:#0b7dda;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+blockquote{
+
+    font-size:32px;
+
+    font-style:italic;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+/* =====================================
+   DARK MODE
+===================================== */
+
+body.dark{
+
+    background:#111;
+
+    color:white;
+
+}
+
+body.dark nav{
+
+    background:rgba(20,20,20,.95);
+
+}
+
+body.dark .timeline-item,
+body.dark .card{
+
+    background:#222;
+
+    color:white;
+
+}
+
+body.dark footer{
+
+    background:black;
+
+}
+
+body.dark #theme-toggle{
+
+    background:#333;
+
+    color:white;
+
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:900px){
+
+    .about-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .hero h1{
+
+        font-size:50px;
+
+    }
+
+    .hero p{
+
+        font-size:18px;
+
+    }
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    nav ul li{
+
+        margin:10px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+
+        font-size:38px;
+
+    }
+
+    blockquote{
+
+        font-size:24px;
+
+    }
+
+    section h2{
+
+        font-size:30px;
+
+    }
+
+}
+/* =====================================
+   SCROLL ANIMATION
+===================================== */
+
+section{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+section.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* Active Navigation */
+
+nav ul li a.active{
+
+    color:#FFD700;
+
+}
+
+/* Scroll To Top Button */
+
+#topBtn{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#FFD700;
+
+    color:black;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+
+    transition:.3s;
+
+}
+
+#topBtn:hover{
+
+    transform:scale(1.1);
+
+}
