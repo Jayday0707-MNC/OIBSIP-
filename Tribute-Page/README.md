@@ -12,7 +12,7 @@ This project was developed as part of the **Oasis Infobyte Web Development & Des
 
 Example:
 
-![Tribute Page Screenshot](images/screenshot.png)
+![Tribute Page Screenshot](images/Screenshot 2.png)
 
 ---
 
